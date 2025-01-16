@@ -15,7 +15,7 @@ const RoomComponent = (props) => {
   var roomId = props.id;
   console.log(props);
   useEffect(() => {
-    const newSocket = io("http://localhost:8080");
+    const newSocket = io("https://youwatch-backend.onrender.com");
     setSocket(newSocket);
 
     newSocket.on("roomCreated", (roomId) => {

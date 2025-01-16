@@ -19,7 +19,7 @@ const YouTubePlayer = ({ videoId: initialVideoId, roomId }) => {
   const DEBOUNCE_TIME = 50; // Debounce time for play/pause events
 
   useEffect(() => {
-    socket.current = io("http://localhost:8080");
+    socket.current = io("https://youwatch-backend.onrender.com");
     socket.current.emit("joinRoom", roomId);
 
     socket.current.on("videoEvent", handleVideoEvent);
